@@ -20,3 +20,5 @@ CREATE TABLE `dog` (
   KEY `location_id` (`location_id`),
   CONSTRAINT `dog_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4
+
+ALTER TABLE `dog` ADD COLUMN `age` enum('Puppy','Adult','Senior') NOT NULL;
